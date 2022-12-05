@@ -1,4 +1,4 @@
-"""Secret Santa"""
+""" Simple Secret Santa"""
 from typing import List
 import random
 
@@ -40,7 +40,7 @@ if __name__ == "__main__":
 
     participants_user_input = input("Enter in participants separated by spaces: \n")
     unpaired_participants_user_input = input(
-        "Enter in participants that cannot be paired w/ eachother separated by commas: \n"
+        "Enter in participant groups that cannot be paired w/ eachother separated by commas: \n"
     )
 
     participants_input = participants_user_input.split(" ")
