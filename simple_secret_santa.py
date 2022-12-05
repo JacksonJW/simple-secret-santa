@@ -25,7 +25,10 @@ def simple_secret_santa(
             for (index, recipient) in zip(range(len(recipients)), recipients)
         }
         recipient_index, recipient = random.choice(list(possible_recipients.items()))
-        while recipient in unpaired_participants_table[gifter]:
+        while recipient == gifter or (
+            gifter in unpaired_participants_table
+            and recipient in unpaired_participants_table[gifter]
+        ):
             possible_recipients.pop(recipient_index)
             recipient_index, recipient = random.choice(
                 list(possible_recipients.items())
